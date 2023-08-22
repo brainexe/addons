@@ -94,6 +94,7 @@ transip_api_key: ''
 inwx_username: ''
 inwx_password: ''
 inwx_shared_secret: ''
+dode_token: ''
 ```
 
 ## Advanced
@@ -513,6 +514,26 @@ on the DNS zone to be used for authentication.
 
 </details>
 
+<details>
+  <summary>dode / Domain Offensive</summary>
+
+  TODO
+
+  Example configuration:
+  ```yaml
+  email: your.email@example.com
+  domains:
+    - your.domain.tld
+  certfile: fullchain.pem
+  keyfile: privkey.pem
+  challenge: dns
+  dns:
+    provider: dns-dode
+    dode_token: ABCDEFGHIJKLMNOPQRSTUVWXYZ012345
+  ```
+
+</details>
+
 ## Certificate files
 
 The certificate files will be available within the "ssl" share after successful request of the certificates.
@@ -545,6 +566,7 @@ dns-netcup
 dns-gandi
 dns-transip
 dns-inwx
+dns-dode
 ```
 
 ## Support
